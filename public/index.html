@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>I'm Craving 700 Dollars</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-color: #1a1a1a;
+                font-family: Arial, sans-serif;
+            }
+
+            .container {
+                text-align: center;
+                padding: 20px;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 90vh;
+                height: auto;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                border-radius: 8px;
+            }
+
+            .placeholder {
+                color: #888;
+                font-size: 24px;
+                padding: 100px;
+                border: 2px dashed #444;
+                border-radius: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Replace 'your-image.jpg' with your actual image filename -->
+            <img
+                src="craving.jpeg"
+                alt="Main Image"
+                onerror="
+                    this.style.display = 'none';
+                    document.querySelector('.placeholder').style.display =
+                        'block';
+                "
+            />
+            <div class="placeholder" style="display: none">
+                Image will appear here
+            </div>
+        </div>
+    </body>
+</html>

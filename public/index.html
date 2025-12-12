@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/jpeg" href="craving.jpeg" />
         <title>I'm Craving 700 Dollars</title>
         <style>
             * {
@@ -62,25 +63,28 @@
         </div>
 
         <script>
-            const imageContainer = document.getElementById('imageContainer');
-            const imageSrc = 'craving.jpeg';
+            const imageContainer = document.getElementById("imageContainer");
+            const imageSrc = "craving.jpeg";
 
             function appendImage() {
-                const img = document.createElement('img');
+                const img = document.createElement("img");
                 img.src = imageSrc;
-                img.alt = 'Craving Image';
-                img.onerror = function() {
-                    this.style.display = 'none';
-                    const placeholder = document.createElement('div');
-                    placeholder.className = 'placeholder';
-                    placeholder.textContent = 'Image will appear here';
+                img.alt = "Craving Image";
+                img.onerror = function () {
+                    this.style.display = "none";
+                    const placeholder = document.createElement("div");
+                    placeholder.className = "placeholder";
+                    placeholder.textContent = "Image will appear here";
                     this.parentNode.replaceChild(placeholder, this);
                 };
                 imageContainer.appendChild(img);
             }
 
-            window.addEventListener('scroll', function() {
-                if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+            window.addEventListener("scroll", function () {
+                if (
+                    window.innerHeight + window.scrollY >=
+                    document.body.offsetHeight - 100
+                ) {
                     appendImage();
                 }
             });
